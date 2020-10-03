@@ -1,0 +1,7 @@
+FROM openjdk:9
+CMD ls
+COPY WebServer.java /amiram/myimages/
+WORKDIR /amiram/myimages/
+EXPOSE 8000
+RUN javac WebServer.java
+CMD java WebServer
